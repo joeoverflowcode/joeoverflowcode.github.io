@@ -1,8 +1,8 @@
 {
+  "homepage": "https://joeoverflowcode.github.io/joeoverflowcode.github.io",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://joeoverflowcode.github.io/joeoverflowcode.github.io",
   "type": "module",
   "scripts": {
      "predeploy": "npm run build",
