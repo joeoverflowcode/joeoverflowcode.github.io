@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	font-family: sans-serif, arial;
+}
+html, body 
+	{
+	font-size: 14px;
+	font-weight: 400;
+	background: white
+
+}
+.container {
+	width: 1100px;
+	margin: 0px auto;
+	display: table;
+}
+.width-33 {
+	width: 33%;
+	float: left;
+}
+.width-66 {
+	width: 66%;
+	float: left;
+}
+
+header{
+background-color: red;
+}
