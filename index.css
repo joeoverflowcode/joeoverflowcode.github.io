@@ -1,29 +1,128 @@
-* {
-	box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700|Oswald|Kanit|Montserrat:600|Poppins|Roboto+Slab:700|Lexend:600|Archivo+Black|Cinzel:700);
+
+body {
+	margin: 0;
 	padding: 0;
-	font-family: sans-serif, arial;
-}
-html, body 
-	{
-	font-size: 14px;
-	font-weight: 400;
-	background: white
+	width: 100%;
+	height: 90vh;
+	font-family: Arial, sans-serif;
+	background-image: url('./assets/DSC04562.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.75; 
+  }
+  
+  .navigation {
+	background-color: #060606;
+	width: 100%;
+	display: flex;
+	position: fixed;
+	justify-content: flex-end;
+
 
 }
-.container {
-	width: 1100px;
-	margin: 0px auto;
-	display: table;
-}
-.width-33 {
-	width: 33%;
-	float: left;
-}
-.width-66 {
-	width: 66%;
-	float: left;
-}
 
-header{
-background-color: red;
-}
+.navigation ul {
+	list-style: none;
+	display: flex;
+	margin-right: 15px;
+
+  }
+  
+  .navigation li {
+	margin: 0 15px;
+	margin-right: 15px;
+  }
+  
+  
+  .navigation a {
+    /* font-family:"Raleway", sans-serif; */
+	/* font-family:"Cinzel", sans-serif; */
+	font-family:"Lexend", sans-serif;
+	
+
+	font-weight: bold;
+	position: relative;
+	text-decoration: none;
+	color: #ffffff;
+  }
+
+  .navigation a:hover{
+	/* opacity: 0.2; */
+	text-decoration: underline;
+  }
+  
+  .main-content {
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 7vw;
+	align-items: center;
+	height: 90vh;
+  }
+  
+  .content {
+	border-radius: 6%;
+	padding-left: 35px;
+	padding-right: 30px;
+	max-width: 30vw;
+	background-color: rgba(255, 255, 255, 0.65);
+	text-align: center;
+	padding-bottom: 20px;
+	border: 5px solid white;
+  }
+
+  .text{
+	padding-bottom: 40px;
+  }
+
+  .text h3{
+	font-family:"Lexend", sans-serif;
+	padding-top: 20px;
+	color: rgba(255, 0, 0, 0.599);
+  }
+
+  .text h1 {
+	font-family:"Cinzel", sans-serif;
+	border-radius: 40%;
+	font-size: 3rem;
+	margin: 0;
+  }
+  
+  .text h2 {
+	font-family:"Lexend", sans-serif;
+	font-size: 1rem;
+	margin: 2px;
+  }
+
+  footer {
+	width: 100%;
+	height: 10vh;
+	background-color: #000000;
+	color: #fff;
+	padding: 10px 0;
+	text-align: center;
+  }
+  
+  .social-icons a.fa {
+	font-size: 35px;
+	margin: 0 10px;
+	text-decoration: none;
+	color: #fff;
+  }
+  
+
+
+.fa {
+	padding: 15px;
+	width: 40px;
+	text-align: center;
+	text-decoration: none;
+  }
+  
+
+  .fa:hover {
+	opacity: 0.2;
+  }
+  
+  
+
