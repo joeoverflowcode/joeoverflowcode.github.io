@@ -31,7 +31,7 @@ body {
 	flex-grow: 1;
   }
   .site-nav {
-	background: #fff;
+	background: #ffffff8d;
 	display: grid;
 	align-items: center;
 	grid-template-areas: "title toggle" "menu menu";
