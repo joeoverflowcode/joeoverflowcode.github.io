@@ -20,17 +20,18 @@ body {
 	display: block;
 	color: var(--color-link);
 	text-align: center;
+	cursor: pointer;
 	&:hover,
 	&:focus {
-	  /* text-decoration: underline; */
-		opacity: 0.3;
+	  text-decoration: none;
+	  color: var(--color-link-hover);
 	}
   }
-
-
+  main {
+	flex-grow: 1;
+  }
   .site-nav {
-	background: #ffffff3e;
-	font-family: "Kanit";
+	background: #fff;
 	display: grid;
 	align-items: center;
 	grid-template-areas: "title toggle" "menu menu";
@@ -48,7 +49,6 @@ body {
 	> * {
 	  display: block;
 	}
-
 	.site-logo {
 	  text-align: center;
 	  line-height: 0.8;
@@ -62,10 +62,7 @@ body {
 	.site-title {
 	  text-transform: uppercase;
 	  font-weight: 800;
-	  letter-spacing: 0.7em;
-	}
-	.site-title:hover{
-		opacity: 1;
+	  letter-spacing: 0.08em;
 	}
   }
   .hidden {
@@ -85,6 +82,7 @@ body {
 	height: 1em;
 	text-align: center;
 	line-height: 0.75;
+	cursor: pointer;
 	&:before {
 	  content: "☰";
 	}
@@ -93,11 +91,10 @@ body {
 	}
   }
   ul.nav-links {
-	list-style: none;
 	grid-area: menu;
 	height: 0;
 	overflow: hidden;
-	transition: height var(30) ease;
+	transition: height var(--menu-transition-timing) ease;
 	display: flex;
 	gap: 1em;
 	flex-direction: column;
@@ -107,12 +104,7 @@ body {
   }
   #toggle-nav:checked + ul.nav-links {
 	height: 100vh;
-
   }
-  .site-title{
-	color: rgba(255, 0, 0, 0.467);
-  }
-
   @media only screen and (min-width: 800px) {
 	.site-nav {
 	  grid-template-areas: "title menu";
@@ -129,6 +121,7 @@ body {
 	  display: none;
 	}
   }
+  
   /* .navigation {
 	position: fixed;
 	background-color: #060606d1;
