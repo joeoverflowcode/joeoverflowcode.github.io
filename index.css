@@ -2,6 +2,9 @@
 
 
 body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	margin: 0;
 	padding: 0;
 	background-image: url('./assets/DSC04562.jpeg');
@@ -16,7 +19,7 @@ body {
 
   :root{
     --white: #f9f9f9;
-    --black: #3b393eba;
+    --black: #433e3a8a;
     --grey: #85888C;
 }
 
@@ -50,7 +53,7 @@ ul{
 	letter-spacing: 15px;
     display: inline-block;
     color: var(--white);
-    font-size: 40px;
+    font-size: 50px;
     margin-left: 10px;
 }
 
@@ -141,6 +144,29 @@ ul{
 .side-menu:checked ~ .hamb .hamb-line::after {
     transform: rotate(45deg);
     top:0;
+}
+
+footer {
+	margin-top: auto;
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+	bottom: 0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 40px;
+    color: var(--white);
+}
+
+.social-icons a:hover {
+	opacity: 0.2;
 }
 
 
