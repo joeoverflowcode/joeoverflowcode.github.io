@@ -9,116 +9,169 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	opacity: 0.95; 
+	background-color: var(--white);
+	font-family: "Poppins", sans-serif;
   }
 
-  a {
-	text-decoration: none;
-	display: block;
-	color: var(--color-link);
-	text-align: center;
-	cursor: pointer;
-	&:hover,
-	&:focus {
-	  text-decoration: none;
-	  color: var(--color-link-hover);
-	}
-  }
-  main {
-	flex-grow: 1;
-  }
-  .site-nav {
-	background: #ffffff8d;
-	display: grid;
-	align-items: center;
-	grid-template-areas: "title toggle" "menu menu";
-	grid-template-columns: 1fr 3.5rem;
-  }
-  
-  a.site-link {
-	grid-area: title;
-	padding: 0.5rem 1rem;
-	font-size: 1.25rem;
-	display: flex;
-	gap: 0.5rem;
-	align-items: center;
-  
-	> * {
-	  display: block;
-	}
-	.site-logo {
-	  text-align: center;
-	  line-height: 0.8;
-	  font-size: 1.75em;
-	  height: 1em;
-	  width: 1em;
-	  border-radius: 50%;
-	  background: var(--color-link);
-	  color: #fff;
-	}
-	.site-title {
-	  text-transform: uppercase;
-	  font-weight: 800;
-	  letter-spacing: 0.08em;
-	}
-  }
-  .hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-  }
-  input#toggle-nav {
-	color: black;
-	grid-area: toggle;
-	appearance: none;
-	font-size: 3rem;
-	width: 1em;
-	height: 1em;
-	text-align: center;
-	line-height: 0.75;
-	cursor: pointer;
-	&:before {
-	  content: "☰";
-	}
-	&:checked:before {
-	  content: "✕";
-	}
-  }
-  ul.nav-links {
-	grid-area: menu;
-	height: 0;
-	overflow: hidden;
-	transition: height var(--menu-transition-timing) ease;
-	display: flex;
-	gap: 1em;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	font-size: 2em;
-  }
-  #toggle-nav:checked + ul.nav-links {
-	height: 100vh;
-  }
-  @media only screen and (min-width: 800px) {
-	.site-nav {
-	  grid-template-areas: "title menu";
-	  grid-template-columns: 16rem 1fr;
-	}
-	ul.nav-links {
-	  height: auto;
-	  font-size: 1.25em;
-	  flex-direction: row;
-	  justify-content: flex-end;
-	  padding-right: 1rem;
-	}
-	#toggle-nav {
-	  display: none;
-	}
-  }
-  
+
+  :root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --grey: #85888C;
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Header */
+.header{
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--grey);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+/* Logo */
+.logo{
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+
+}
+
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    
+}
+
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+
+}
+
+.menu a:hover{
+    background-color: var(--grey);
+}
+
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+/* Menu Icon */
+
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+    
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before{
+    top: 5px;
+}
+
+.hamb-line::after{
+    top: -5px;
+}
+
+
+.side-menu {
+    display: none;
+}
+
+/* Toggle menu icon */
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+/* Responsiveness */
+
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu a:hover{
+        background-color: transparent;
+        color: var(--grey);
+        
+    }
+    
+    .hamb{
+        display: none;
+    }
+
+}
   /* .navigation {
 	position: fixed;
 	background-color: #060606d1;
