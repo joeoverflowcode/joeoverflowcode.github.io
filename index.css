@@ -75,6 +75,7 @@ body {
 	width: 1px;
   }
   input#toggle-nav {
+	color: black;
 	grid-area: toggle;
 	appearance: none;
 	font-size: 3rem;
