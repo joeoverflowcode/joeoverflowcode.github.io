@@ -62,15 +62,25 @@ ul li a {
 }
 
 #name {
-    margin-left: 40px;
-    letter-spacing:3px;
+    margin-left: 20px;
     color:gray
 }
+.h2{
+        letter-spacing:3px;
+}
 
-/* @media (max-width:500px) {
+@media (max-width:500px) {
 
     h1 {
-        font-size: 28px;
-
+        font-size: 24px;
     }
-} */
+ul {
+    font-size:16px;
+}
+h2{
+    font-size:20px;
+}
+#location {
+    font-size:14px;
+}
+}
