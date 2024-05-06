@@ -3,7 +3,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Monaco", monospace;    
+    font-family: Arial, Helvetica, sans-serif;   
     background-color: rgb(225, 221, 208);
 }
 
@@ -11,8 +11,8 @@ body {
 #top {
     display: flex;
     height:60vh; 
-    margin-top: 5%;
-    margin-right: 5%;
+    margin-top: 10%;
+    margin-right: 8%;
 }
 
 #top-left {
@@ -24,6 +24,22 @@ body {
     align-items: center;
     justify-content: center;
     border-right: 2px solid darkgray;
+
+}
+h1{
+padding: 12px;
+    background:
+      linear-gradient(to right, white 2px, transparent 2px) 0 0,
+      /* linear-gradient(to right, white 2px, transparent 2px) 0 100%, */
+      /* linear-gradient(to left, white 2px, transparent 2px) 100% 0, */
+      linear-gradient(to left, white 2px, transparent 2px) 100% 100%,
+      linear-gradient(to bottom, white 2px, transparent 2px) 0 0,
+      /* linear-gradient(to bottom, white 2px, transparent 2px) 100% 0, */
+      /* linear-gradient(to top, white 2px, transparent 2px) 0 100%, */
+      linear-gradient(to top, white 2px, transparent 2px) 100% 100%;
+  
+    background-repeat: no-repeat;
+    background-size: 25px 25px;   
 
 }
 
@@ -58,15 +74,21 @@ ul {
 ul li a {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit text color from parent */
-
+    text-transform: uppercase;
 }
 
-#name {
+#bio {
     margin-left: 20px;
-    color:gray
+    color:gray;
+
 }
-.h2{
-        letter-spacing:3px;
+h2{
+        font-weight: 100;
+        letter-spacing:12px;
+        text-transform: uppercase;
+}
+#location {
+    letter-spacing: 0px;
 }
 
 @media (max-width:500px) {
@@ -74,13 +96,13 @@ ul li a {
     h1 {
         font-size: 24px;
     }
-ul {
-    font-size:16px;
-}
-h2{
-    font-size:20px;
-}
-#location {
-    font-size:14px;
-}
+    ul {
+        font-size:15px;
+    }
+    h2{
+        font-size:20px;
+    }
+    #location {
+        font-size:14px;
+    }
 }
