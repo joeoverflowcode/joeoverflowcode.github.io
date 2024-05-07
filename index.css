@@ -74,7 +74,17 @@ padding: 12px;
 ul li a {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit text color from parent */
-    text-transform: uppercase;
+    text-transform: lowercase;
+
+}
+a{
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+    text-transform: lowercase;
+}
+
+li :hover {
+    color:rgb(111, 110, 110)
 }
 
 #bio {
@@ -84,7 +94,7 @@ ul li a {
 }
 h2{
         font-weight: 100;
-        letter-spacing:1px;
+        letter-spacing:10px;
         text-transform: uppercase;
         /* color:white; */
 }
@@ -114,10 +124,10 @@ h2{
 @media (max-width:500px) {
 
     h1 {
-        font-size: 24px;
+        font-size: 25px;
     }
     ul {
-        font-size:14px;
+        font-size:13px;
     }
     h2{
         font-size:20px;
