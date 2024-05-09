@@ -10,7 +10,7 @@ body {
 
 #top {
     display: flex;
-    height:60vh; 
+    height:55vh; 
     margin-top: 8%;
     margin-right: 10%;
 }
@@ -50,7 +50,7 @@ padding: 12px;
 }
 
 #links{
-    height: 80%;
+    height: 70%;
     padding-left: 40px;
     border-bottom: 2px solid darkgray;
 }
@@ -146,8 +146,8 @@ span{
     h1 {
         font-size: 27px;
     }
-    ul {
-        font-size:13px;
+    li {
+        font-size:14px;
     }
     h2{
         font-size:20px;
