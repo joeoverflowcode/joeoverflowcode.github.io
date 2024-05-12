@@ -1,0 +1,17 @@
+#animation{
+width: 300px;
+height: 200px;
+background: url('./gifs/test.png') left center;
+background-size: cover;
+animation: play 3.0s steps(6) infinite;
+display: inline-block;
+}
+
+@keyframes play {
+    100% {background-position: -300px;}
+}
+
+img{
+    width: 300px;
+    border: 2px solid black;
+}
