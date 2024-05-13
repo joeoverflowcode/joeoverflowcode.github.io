@@ -23,7 +23,7 @@ body{
     font-size: 18px;
     padding: 12px;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: rgb(65, 65, 65);
     font-family: "Courier New", Courier, monospace;
     /* overflow: auto; */
@@ -55,6 +55,9 @@ body{
     /* font-weight: 600; */
     color: rgb(225, 221, 208);
     /* font-size: 20px; */
+}
+a{
+
 }
 a.code {
     text-decoration: none;
