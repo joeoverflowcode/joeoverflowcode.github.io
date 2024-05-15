@@ -1,96 +1,57 @@
-#animation{
-width: 400px;
-height: 300px;
-background: url('./gifs/test1.png') left center;
-background-size: cover;
-animation: play 15s steps(3) infinite;
-display: inline-block;
-}
-
-@keyframes play {
-    100% {background-position: -1200px;}
-}
-
 body{
     background-color: rgb(225, 221, 208);
     font-family: Arial, Helvetica, sans-serif;   
-    padding: 8px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-items: center;
-}
-.project {
-    margin: 8px;
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
-    padding: 12px;
-    /* border: 1px solid rgb(111, 111, 111); */
-    border-radius: 4px;
-    background-color: rgb(0, 0, 0, 0.9);
-    /* font-family: "Courier New", Courier, monospace; */
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-    /* overflow: auto; */
-    max-width: 600px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    align-items: center;
 }
 
-.object{
-    
-    color: rgb(239, 237, 237);
-    font-weight: 600;
+#projects {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap; 
+    gap: 40px;    
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.info{
+    /* border: 1px solid black; */
+    border-radius: 10px;
     padding: 10px;
-    /* display: inline-block; */
+
+}
+span{
+    font-weight: 600;
+    font-size: 18px;
+}
+.links{
     display: flex;
     flex-direction: column;
-    /* text-indent: 40px; */
-    /* padding-left: 20px; */
-}
-.keyvaluepairs{
-    font-weight: 200;
-    color: rgb(125, 124, 124);
-    margin-left: 4em;
-    /* display: inline-block; */
-    text-indent:-2em ;
-    padding: 8px;
-}
-.const {
-    /* font-weight: 600; */
-    /* color: rgb(225, 221, 208); */
-    /* font-size: 20px; */
-}
-a{
-
-}
-a.code {
-    text-decoration: none;
-    color:rgb(43, 94, 236);
-    cursor: pointer;
-    font-size: inherit;
 }
 
-.cursor {
-  width: 2px;
-  background-color: #ffffff;
-  animation: blink-animation 1s step-start infinite;
-}
-
-@keyframes blink-animation {
-  50% {
-      opacity: 0;
-  }
-}
-
-@media (max-width:500px) {
-    .project {
-        font-size: 14px;
+#animation{
+    width: 400px;
+    height: 300px;
+    /* height: auto;
+    padding-top: 75%; */
+    background: url('./gifs/test1.png') left center;
+    background-size: cover;
+    animation: play 6s steps(3) infinite;
+    }
+    
+    @keyframes play {
+        100% {background-position: -1200px;}
+    }
+    
+    @media (max-width:500px) {
 
     }
-
-}
-
-
-
-  
-
