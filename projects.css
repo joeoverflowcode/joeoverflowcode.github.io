@@ -45,9 +45,19 @@ span{
     padding-top: 75%; */
     background: url('./gifs/test1.png') left center;
     background-size: cover;
-    animation: play 6s steps(3) infinite;
+    animation: play 10s steps(3) infinite;
     }
     
+    #animation2{
+        width: 400px;
+        height: 300px;
+        /* height: auto;
+        padding-top: 75%; */
+        background: url('./gifs/test2.png') left center;
+        background-size: cover;
+        animation: play 8s steps(3) infinite;
+        }
+
     @keyframes play {
         100% {background-position: -1200px;}
     }
