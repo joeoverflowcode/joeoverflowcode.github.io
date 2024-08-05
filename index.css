@@ -154,6 +154,20 @@ span{
     align-items: center;
 }
 
+#social li a span {
+    color: transparent; /* Make the text transparent */
+    transition: color 0.3s ease; /* Smooth transition for the color change */
+    font-size: 16px;
+}
+
+#social li a:hover span {
+    color: darkgray; /* Change to your desired color when the icon is hovered */
+}
+
+#social li a i {
+    transition: color 0.3s ease; /* Optional: Smooth transition for the icon */
+}
+
 @media (max-width:500px) {
 
     h1 {
