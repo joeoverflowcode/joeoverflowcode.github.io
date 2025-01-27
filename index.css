@@ -88,7 +88,7 @@ a{
 }
 
 li :hover {
-    color:rgb(111, 110, 110)
+    color:black;
 }
 
 #bio {
@@ -162,7 +162,7 @@ span{
 }
 
 #social li a:hover span {
-    color: darkgray; /* Change to your desired color when the icon is hovered */
+    color: black; /* Change to your desired color when the icon is hovered */
 }
 
 #social li a i {
